@@ -1,1 +1,3 @@
-Initial Commit
+Dokumentacija - Projektni zadatak
+
+Tim 15
