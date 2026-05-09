@@ -1,0 +1,11 @@
+UVOD
+
+Tema našeg projekta je izrada baze podataka za sustav evidencije planinarskih aktivnosti. Cilj projekta bio je napraviti bazu podataka koja omogućuje organizaciju planinarskih izleta i pohranu podataka vezanih uz planinare, planine, staze, opremu i ostale aktivnosti povezane s planinarenjem.
+
+Tijekom izrade projekta baza podataka se više puta mijenjala i nadopunjavala kako bismo dobili što bolju i pregledniju strukturu. Kroz rad na projektu koristili smo znanja obrađena na kolegiju, kao što su izrada ER dijagrama, povezivanje entiteta, definiranje relacija i pisanje SQL upita.
+
+Baza podataka omogućuje evidenciju planinara i njihovih prijava na izlete, pregled staza, vrhova i lokacija, kao i unos komentara, ocjena i vremenske prognoze za pojedine izlete. Također je omogućeno evidentiranje opreme koja se koristi na određenim izletima.
+
+Za zajednički rad i komunikaciju koristili smo GitHub putem kojeg smo dijelili SQL skripte, dokumentaciju i ostale promjene na projektu. Za izradu ER dijagrama korišten je Lucidchart, dok je baza podataka izrađena u MySQL Workbench-u gdje su kreirane tablice, relacije i SQL upiti.
+
+U nastavku dokumentacije prikazani su opis poslovnog procesa, ER dijagram, relacijski model, EER dijagram, ograničenja te primjeri upita i pogleda korištenih u radu baze podataka.
