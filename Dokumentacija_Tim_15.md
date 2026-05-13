@@ -32,7 +32,7 @@ Oprema se koristi na izletima, odnosno na jednom izletu se može koristiti više
 
 ## 3.	ENTITY RELATIONSHIP (ER) DIJAGRAM
 
- ![ER](https://github.com/dzagorjan/BP1/blob/main/pics/ER.jpg)
+ ![ER](./pics/ER.jpg)
 
 ### 3.1.	Opis Entity Relatonship (ER) dijagrama
 
