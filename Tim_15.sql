@@ -5,24 +5,28 @@ USE planinarski_sustav;
 
 -- ( kreirati po redoslijedu (radi FK): grupa, lokacija, planina, prognoza, oprema, planinar, vrh, staza, izlet, komentar, ocjena, prijava, oprema_izlet  )
 
+-- Alen Selimović
 CREATE TABLE grupa (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     naziv VARCHAR(50) NOT NULL UNIQUE,
     opis VARCHAR(100)
 );
 
+-- Alen Selimović
 CREATE TABLE lokacija (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     naziv VARCHAR(50) NOT NULL UNIQUE,
     regija VARCHAR(100)
 );
 
+-- Domagoj Zagorjan
 CREATE TABLE planina (
-	id INTEGER PRIMARY KEY,
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     naziv VARCHAR(50) NOT NULL UNIQUE,
     drzava VARCHAR(50)
 );
 
+-- Domagoj Zagorjan
 CREATE TABLE prognoza (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     temperatura DECIMAL(4,2),
@@ -32,6 +36,7 @@ CREATE TABLE prognoza (
         CHECK (temperatura BETWEEN -50 AND 60)
 );
 
+-- Alen Selimović
 CREATE TABLE oprema (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     naziv VARCHAR(50) NOT NULL UNIQUE,
@@ -40,6 +45,7 @@ CREATE TABLE oprema (
 );
 
 
+-- Alen Selimović
 CREATE TABLE planinar (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_grupa INTEGER NOT NULL,
@@ -60,6 +66,7 @@ CREATE TABLE planinar (
         CHECK (tezina > 0)
 );
 
+-- Domagoj Zagorjan
 CREATE TABLE vrh (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_planina INTEGER NOT NULL,
@@ -73,6 +80,7 @@ CREATE TABLE vrh (
         UNIQUE (id_planina, naziv)
 );
 
+-- Domagoj Zagorjan
 CREATE TABLE staza (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_lokacija INTEGER NOT NULL,
@@ -97,6 +105,7 @@ CREATE TABLE staza (
 );
 
 
+-- Alen Selimović
 CREATE TABLE izlet (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_staza INTEGER NOT NULL,
@@ -114,6 +123,7 @@ CREATE TABLE izlet (
         CHECK (tezina IN ('lagana', 'srednja', 'teska'))
 );
 
+-- Alen Selimović
 CREATE TABLE komentar (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_planinar INTEGER NOT NULL,
@@ -124,6 +134,7 @@ CREATE TABLE komentar (
     FOREIGN KEY (id_izlet) REFERENCES izlet(id)
 );
 
+-- Alen Selimović
 CREATE TABLE ocjena (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_izlet INTEGER NOT NULL,
@@ -138,7 +149,7 @@ CREATE TABLE ocjena (
         UNIQUE (id_planinar, id_izlet)
 );
 
-
+-- Domagoj Zagorjan
 CREATE TABLE prijava (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_planinar INTEGER NOT NULL,
@@ -154,6 +165,7 @@ CREATE TABLE prijava (
         UNIQUE (id_planinar, id_izlet)
 );
 
+-- Domagoj Zagorjan
 CREATE TABLE oprema_izlet (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     id_izlet INTEGER NOT NULL,
