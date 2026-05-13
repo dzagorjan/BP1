@@ -10,7 +10,7 @@
 #### **Tim 15**
 
 ###### **Članovi:**
- **Ivana Rukavina** (JMBAG: xxxxxxxxxxx)
+**Ivana Rukavina** (JMBAG: xxxxxxxxxxx)
 **Ivan Božinović** (JMBAG: xxxxxxxxxxx)
 **Alen Selimović** (JMBAG: xxxxxxxxxxx)
 **Domagoj Marković** (JMBAG: xxxxxxxxxxx)
@@ -32,7 +32,7 @@ Oprema se koristi na izletima, odnosno na jednom izletu se može koristiti više
 
 ## 3.	ENTITY RELATIONSHIP (ER) DIJAGRAM
 
- ![ER](./pics/ER.jpg)
+ ![ER](https://github.com/dzagorjan/BP1/blob/main/pics/ER.jpg)
 
 ### 3.1.	Opis Entity Relatonship (ER) dijagrama
 
