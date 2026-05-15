@@ -29,7 +29,7 @@ CREATE TABLE planina (
 -- Domagoj Zagorjan
 CREATE TABLE prognoza (
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    temperatura DECIMAL(4,2),
+    temperatura DECIMAL(4,2) NOT NULL,
     vremenski_uvjeti VARCHAR(50),
     datum DATETIME,
 	 CONSTRAINT chk_prognoza_temperatura
@@ -175,3 +175,21 @@ CREATE TABLE oprema_izlet (
 	 CONSTRAINT uq_oprema_izlet
         UNIQUE (id_izlet, id_oprema)
 );
+
+
+-- UPITI
+-- Domagoj Zagorjan
+
+SELECT
+	i.id,
+    i.naziv AS naziv_izleta,
+    COUNT(p.id_planinar) AS broj_prijavljenih
+FROM izlet i   
+JOIN prijava p ON i.id = p.id_izlet
+GROUP BY i.id, i.naziv
+ORDER BY broj_prijavljenih DESC;
+
+    
+    
+
+
